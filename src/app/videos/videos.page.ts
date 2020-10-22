@@ -14,7 +14,7 @@ export class VideosPage implements OnInit {
   [x: string]: any;
 
   rule;
-  loadData;
+  // loadData: any;
 
   rules = [
     {

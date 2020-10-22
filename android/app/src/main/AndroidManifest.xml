@@ -3,7 +3,6 @@
     package="io.ionic.soccerjuice">
 
     <!-- Permissions -->
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application

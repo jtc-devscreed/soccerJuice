@@ -1,0 +1,50 @@
+<ion-header [translucent]="true" >
+  <ion-row size="12"></ion-row>
+    <ion-toolbar>
+      <ion-img src="assets/banner/banner1.png" style="width: 100%; margin: auto;"></ion-img>
+        <ion-buttons slot="end">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="danger">
+  <ion-row>
+    <ion-col size="12" *ngFor="let offside of offsides">
+      <ion-card>
+        <ion-card-header>
+          <h2> {{offside.label}} </h2>
+          
+        </ion-card-header>
+          <ion-card-content>
+          <h1> "{{offside.title}}" </h1>
+          <ion-img src="{{offside.img}}"></ion-img>
+          <br>
+          <h3> "{{offside.desc}}"" </h3>
+          <br>
+          <i><b> Photo Credits to: {{ offside.credits}}</b></i>
+
+          </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+<!-- infinite scroll -->
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="crescent"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>  
+
+</ion-content>              
+
+<ion-footer color="danger">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar>          
+        <ion-img src="assets/icon/icon2.png" style="width: 45px; height: 45;"></ion-img>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

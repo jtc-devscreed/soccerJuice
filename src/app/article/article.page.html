@@ -1,6 +1,6 @@
 <ion-header [translucent]="true" >
   <ion-row size="12"></ion-row>
-    <ion-toolbar>
+    <ion-toolbar color="dark">
       <ion-img src="assets/banner/banner1.png" style="width: 100%; margin: auto;"></ion-img>
         <ion-buttons slot="end">
         <ion-menu-button menu="main-menu"></ion-menu-button>
@@ -8,7 +8,7 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content class="articles-background-color">
+<ion-content color="danger">
   
     <ion-card class="articles-background-color-card" 
     *ngIf="isLoading == true">
@@ -33,11 +33,10 @@
 
 </ion-content>
 
-
-<ion-footer color="danger">
+<ion-footer>
   <ion-toolbar>
     <ion-tabs>
-      <ion-tab-bar>          
+      <ion-tab-bar color="dark">          
         <ion-img src="assets/icon/icon2.png" style="width: 45px; height: 45;"></ion-img>
       </ion-tab-bar>
     </ion-tabs>

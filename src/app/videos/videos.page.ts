@@ -126,6 +126,13 @@ constructor(
     this.readData();
   }
 
+  loadData(event) {
+    setTimeout(() => {
+      console.log('Done');
+      event.target.complete();
+    }, 1000);
+  }
+
 readData() {
   this.http.get<any>('/assets/json/sources.json').subscribe((data) => {
     console.log(data);

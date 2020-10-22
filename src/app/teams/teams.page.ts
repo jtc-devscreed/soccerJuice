@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-// import { ConsoleReporter } from 'jasmine';
 
 
 
@@ -11,10 +10,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamsPage implements OnInit {
   [x: string]: any;
-  
-offside;
-
-dataTP;
 
 offsides = [
   {
@@ -68,17 +63,11 @@ offsides = [
     setTimeout(() => {
       console.log('Done');
       event.target.complete();
-      // App logic to determine if all data is loaded
-      // and disable the infinite scroll
-      // if (data.length == 1000) {
-      //   event.target.disabled = true;
-      // }
     }, 1000);
 
   }
 
   getTeamsDetails(Object) {
-      // alert(object.id)
       console.log(Object.id)
   }
 

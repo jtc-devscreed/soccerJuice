@@ -40,12 +40,6 @@ export class HomePage implements OnInit {
     this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
   }
 
-  // ionViewDidEnter() {
-  //   // this.serviceApi.getNews().subscribe((data) => {
-  //   //   this.articles = data['articles'];
-  //   //   console.log (data);
-  //   // });
-  // }
 
   viewDetails(id){
      this.nav.navigateForward(['articles/' + id]);

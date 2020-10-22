@@ -34,22 +34,13 @@ export class ArticlePage implements OnInit {
       this.activeRoutes.params.subscribe((params) => {
           console.log(params.id);
          this.myId = parseInt(params.id)
-        // console.log(params.id);
+       
       })
-      // this.dataAPI.getNews().subscribe((data) => {
-      //   // console.log(data);
-      //   // this.data = data.news;        
-      //   this.datas = data.news;
-      //   console.log(data.id);
-      // });
+    
       this.dataAPI.getNews().subscribe((data)=>{
           console.log(data.news);
           return this.datas = data.news;
-        //   this.DataJsonService = data['news'];
-        // this.dataTeam = data.sports[0].leagues[0].teams.filter((arr)=>{
-        //     return arr.team.id == this.teamId.toString();
         });
-      // });
     }
 
     async presentLoading() {
@@ -59,9 +50,8 @@ export class ArticlePage implements OnInit {
         duration: 2000
       });
       await loading.present();
-
+      
       const { role, data } = await loading.onDidDismiss();
-      // console.log(this.dataDetails);
       this.isLoading = true;
       this.readData();
     }
